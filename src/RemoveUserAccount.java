@@ -25,7 +25,9 @@ public class RemoveUserAccount {
   @Test
   public void testRemoveUserAccount() throws Exception {
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/");
+    Thread.sleep(1000);
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/myaccount");
+    Thread.sleep(2000);
     driver.findElement(By.linkText("Create Account")).click();
     driver.findElement(By.id("createusername")).click();
     driver.findElement(By.id("createusername")).clear();
@@ -44,6 +46,7 @@ public class RemoveUserAccount {
     driver.findElement(By.id("loginpassword")).click();
     driver.findElement(By.id("loginpassword")).clear();
     driver.findElement(By.id("loginpassword")).sendKeys("password");
+    Thread.sleep(2000);
     driver.findElement(By.id("loginsubmit")).click();
     driver.findElement(By.id("returnUsernameDelete")).click();
     driver.findElement(By.id("returnUsernameDelete")).clear();

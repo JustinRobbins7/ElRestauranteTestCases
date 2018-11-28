@@ -25,6 +25,7 @@ public class RedeemGiftCard {
   @Test
   public void testRedeemGiftCard() throws Exception {
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/");
+    Thread.sleep(1000);
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/myaccount");
     driver.findElement(By.id("loginusername")).click();
     driver.findElement(By.id("loginusername")).clear();
@@ -32,11 +33,12 @@ public class RedeemGiftCard {
     driver.findElement(By.id("loginpassword")).click();
     driver.findElement(By.id("loginpassword")).clear();
     driver.findElement(By.id("loginpassword")).sendKeys("password");
+    Thread.sleep(2000);
     driver.findElement(By.id("loginsubmit")).click();
-    Thread.sleep(3000);
     driver.findElement(By.id("giftCardNumber")).click();
     driver.findElement(By.id("giftCardNumber")).clear();
     driver.findElement(By.id("giftCardNumber")).sendKeys("250250250250250");
+    Thread.sleep(3000);
     driver.findElement(By.id("addGiftCard")).click();
     driver.findElement(By.linkText("Logout From Website")).click();
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/myaccount");
@@ -46,8 +48,8 @@ public class RedeemGiftCard {
     driver.findElement(By.id("loginpassword")).click();
     driver.findElement(By.id("loginpassword")).clear();
     driver.findElement(By.id("loginpassword")).sendKeys("test");
-    driver.findElement(By.id("loginsubmit")).click();
     Thread.sleep(3000);
+    driver.findElement(By.id("loginsubmit")).click();
     driver.findElement(By.id("balanceNumber")).click();
     driver.findElement(By.id("balanceNumber")).clear();
     driver.findElement(By.id("balanceNumber")).sendKeys("250250250250250");

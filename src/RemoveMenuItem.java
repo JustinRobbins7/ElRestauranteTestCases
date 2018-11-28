@@ -25,6 +25,7 @@ public class RemoveMenuItem {
   @Test
   public void testRemoveMenuItem() throws Exception {
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/");
+    Thread.sleep(1000);
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/myaccount");
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='User Login:'])[1]/following::div[1]")).click();
     driver.findElement(By.id("loginusername")).click();
@@ -34,6 +35,7 @@ public class RemoveMenuItem {
     driver.findElement(By.id("loginpassword")).click();
     driver.findElement(By.id("loginpassword")).clear();
     driver.findElement(By.id("loginpassword")).sendKeys("password");
+    Thread.sleep(2000);
     driver.findElement(By.id("loginsubmit")).click();
     driver.findElement(By.id("title")).click();
     driver.findElement(By.id("title")).clear();

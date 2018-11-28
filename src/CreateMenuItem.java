@@ -27,12 +27,14 @@ public class CreateMenuItem {
   @Test
   public void testCreateMenuItem() throws Exception {
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/");
+    Thread.sleep(2000);
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/myaccount");
     driver.findElement(By.id("loginusername")).click();
     driver.findElement(By.id("loginusername")).clear();
     driver.findElement(By.id("loginusername")).sendKeys("admin");
     driver.findElement(By.id("loginpassword")).clear();
     driver.findElement(By.id("loginpassword")).sendKeys("password");
+    Thread.sleep(2000);
     driver.findElement(By.id("loginsubmit")).click();
     driver.findElement(By.id("title")).click();
     driver.findElement(By.id("title")).clear();

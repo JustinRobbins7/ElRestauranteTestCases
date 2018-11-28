@@ -25,6 +25,7 @@ public class Login {
   @Test
   public void testLogin() throws Exception {
 	driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/menu");
+	Thread.sleep(2000);
 	driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/myaccount");
 	Thread.sleep(2000);
     driver.findElement(By.id("loginusername")).click();

@@ -25,6 +25,7 @@ public class AddGiftCard {
   @Test
   public void testAddGiftCard() throws Exception {
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/");
+    Thread.sleep(2000);
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/myaccount");
     driver.findElement(By.id("loginusername")).click();
     driver.findElement(By.id("loginusername")).clear();
@@ -32,6 +33,7 @@ public class AddGiftCard {
     driver.findElement(By.id("loginpassword")).click();
     driver.findElement(By.id("loginpassword")).clear();
     driver.findElement(By.id("loginpassword")).sendKeys("password");
+    Thread.sleep(2000);
     driver.findElement(By.id("loginsubmit")).click();
     Thread.sleep(3000);
     driver.findElement(By.id("giftCardNumber")).click();

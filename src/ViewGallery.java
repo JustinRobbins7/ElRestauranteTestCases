@@ -25,6 +25,7 @@ public class ViewGallery {
   @Test
   public void testViewGallery() throws Exception {
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/");
+    Thread.sleep(2000);
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/gallery");
     Thread.sleep(2000);
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='All Menu'])[1]/following::li[1]")).click();

@@ -26,7 +26,8 @@ public class RegisterUser {
 
   @Test
   public void testRegisterUser() throws Exception {
-    driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/menu");
+    driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/");
+    Thread.sleep(1000);
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/myaccount");
     Thread.sleep(2000);
     driver.findElement(By.linkText("Create Account")).click();

@@ -25,6 +25,7 @@ public class CreateNewAdmin {
   @Test
   public void testCreateNewAdmin() throws Exception {
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/");
+    Thread.sleep(2000);
     driver.get("http://ec2-18-223-100-203.us-east-2.compute.amazonaws.com:8080/myaccount");
     Thread.sleep(3000);
     driver.findElement(By.linkText("Create Account")).click();
@@ -45,18 +46,18 @@ public class CreateNewAdmin {
     driver.findElement(By.id("loginpassword")).click();
     driver.findElement(By.id("loginpassword")).clear();
     driver.findElement(By.id("loginpassword")).sendKeys("password");
+    Thread.sleep(2000);
     driver.findElement(By.id("loginsubmit")).click();
-    Thread.sleep(3000);
     driver.findElement(By.id("returnUsernameAdmin")).click();
     driver.findElement(By.id("returnUsernameAdmin")).clear();
     driver.findElement(By.id("returnUsernameAdmin")).sendKeys("test20000");
-    driver.findElement(By.id("returnButtonAdmin")).click();
     Thread.sleep(3000);
+    driver.findElement(By.id("returnButtonAdmin")).click();
     driver.findElement(By.id("returnUsernameDelete")).click();
     driver.findElement(By.id("returnUsernameDelete")).clear();
     driver.findElement(By.id("returnUsernameDelete")).sendKeys("test20000");
-    driver.findElement(By.id("returnButtonDelete")).click();
     Thread.sleep(3000);
+    driver.findElement(By.id("returnButtonDelete")).click();
     driver.findElement(By.linkText("Logout From Website")).click();
   }
 
